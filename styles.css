@@ -1,0 +1,163 @@
+/* General Card Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    max-height: 600px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f1c40f, #f39c12);
+  }
+  
+  .card-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding: 10px;
+    z-index: 10;
+  }
+  
+  .pokemon-name {
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+  
+  .pokemon-type {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .pokemon-image img {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Scrollable content */
+  .scrollable-content {
+    overflow-y: auto;
+    max-height: 480px;  /* Adjust this for the scrollable content height */
+    padding: 10px;
+  }
+  
+  .stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  
+  .stat {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .stat-name {
+    font-weight: bold;
+  }
+  
+  .stat-value {
+    font-size: 18px;
+    color: #2c3e50;
+  }
+  
+  /* Centering the input boxes and buttons */
+  .stat-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .stat-inputs input {
+    width: 80%;
+    padding: 5px;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .stat-inputs button {
+    padding: 8px;
+    background-color: #27ae60;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .stat-inputs button:hover {
+    background-color: #2ecc71;
+  }
+  
+  /* Abilities, Moves, Weaknesses and New Sections */
+  .abilities, .moves, .weaknesses, .additional-info {
+    margin-top: 20px;
+  }
+  
+  input[type="text"], input[type="number"], textarea {
+    width: 80%;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #27ae60;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #2ecc71;
+  }
+  
+  /* Styling for ability, moves, weaknesses, height, weight, evolution display */
+  p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+
+/* Example shiny effect */
+  .shiny {
+    border: 5px solid gold;
+    filter: brightness(1.25);
+  }
+
+  .shiny-option {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+ #shiny {
+    margin-left: 5px;
+    transform: scale(1.5);
+ }

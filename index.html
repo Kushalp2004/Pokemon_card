@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon Card Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="card" id="pokemon-card">
+    <!-- Fixed Header (Name, Type, Image) -->
+    <div class="card-header">
+      <div class="pokemon-name">Pikachu</div>
+      <div class="pokemon-type">Electric</div>
+    </div>
+
+    <div class="pokemon-image">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt="Pikachu">
+    </div>
+
+    <!-- Scrollable Content -->
+    <div class="scrollable-content">
+      <!-- Stats Section -->
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-name">HP</span>
+          <span class="stat-value" id="hp">35</span>
+        </div>
+        <div class="stat">
+          <span class="stat-name">Attack</span>
+          <span class="stat-value" id="attack">55</span>
+        </div>
+        <div class="stat">
+          <span class="stat-name">Defense</span>
+          <span class="stat-value" id="defense">40</span>
+        </div>
+        <div class="stat">
+          <span class="stat-name">Speed</span>
+          <span class="stat-value" id="speed">90</span>
+        </div>
+      </div>
+
+      <!-- Custom Stats Inputs -->
+      <div class="stat-inputs">
+        <label for="input-hp">HP:</label>
+        <input type="number" id="input-hp" value="35" min="0" max="255">
+        <label for="input-attack">Attack:</label>
+        <input type="number" id="input-attack" value="55" min="0" max="255">
+        <label for="input-defense">Defense:</label>
+        <input type="number" id="input-defense" value="40" min="0" max="255">
+        <label for="input-speed">Speed:</label>
+        <input type="number" id="input-speed" value="90" min="0" max="255">
+        <button onclick="updateStats()">Update Stats</button>
+      </div>
+
+      <!-- Abilities Section -->
+      <div class="abilities">
+        <label for="abilities">Abilities:</label>
+        <input type="text" id="abilities" placeholder="Enter Ability" value="Static Charge">
+        <button onclick="updateAbilities()">Update Ability</button>
+        <p id="ability-display">Ability: Static Charge</p>
+      </div>
+
+      <!-- Moves Section -->
+      <div class="moves">
+        <label for="moves">Moves:</label>
+        <textarea id="moves" placeholder="Enter Pokémon's moves (comma separated)" rows="3">Thunderbolt, Quick Attack</textarea>
+        <button onclick="updateMoves()">Update Moves</button>
+        <p id="moves-display">Moves: Thunderbolt, Quick Attack</p>
+      </div>
+
+      <!-- Weaknesses Section -->
+      <div class="weaknesses">
+        <label for="weaknesses">Weaknesses:</label>
+        <input type="text" id="weaknesses" placeholder="Enter Weaknesses" value="Ground">
+        <button onclick="updateWeaknesses()">Update Weaknesses</button>
+        <p id="weaknesses-display">Weakness: Ground</p>
+      </div>
+
+      <!-- New Sections: Height, Weight, Evolution -->
+      <div class="additional-info">
+        <div class="info-item">
+          <label for="height">Height:</label>
+          <input type="number" id="height" placeholder="Enter Height (m)" value="0.4">
+          <p id="height-display">Height: 0.4 m</p>
+        </div>
+        <div class="info-item">
+          <label for="weight">Weight:</label>
+          <input type="number" id="weight" placeholder="Enter Weight (kg)" value="6.0">
+          <p id="weight-display">Weight: 6.0 kg</p>
+        </div>
+        <div class="info-item">
+          <label for="evolution">Evolution:</label>
+          <input type="text" id="evolution" placeholder="Enter Evolution" value="Pikachu evolves from Pichu">
+          <p id="evolution-display">Evolution: Pikachu evolves from Pichu</p>
+        </div>
+      </div>
+
+      <!-- Shiny Pokémon Option -->
+      <div class="shiny-option">
+        <label for="shiny">Shiny Pokémon:</label>
+        <input type="checkbox" id="shiny">
+        <button onclick="toggleShiny()">Toggle Shiny</button>
+      </div>    
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
